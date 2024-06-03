@@ -1,0 +1,62 @@
+3주차
+
+수학삼각, 통계함수
+
+=QUOTIENT(값1, 값2) : 몫을 구한다 == 값1 / 값2
+=MOD(값1, 값2) : 나머지를 구한다 == 값1 / 값2
+=INT(숫자값) : 숫자값을 넘지 않는 최대의 정수를 구한다.
+ex) =INT(8.614) : 8		=INT(-8.614) : -9
+=ABS(숫자값) : 숫자값의 절대값으로 계산해 양수만 추출
+
+=STDEV.S(number1, number2, ... ) : 표준편차
+=VAR.S(number1, number2, ... ) : 분산
+
+=LARGE(array, k)
+=LARGE(배열, 몇 번째 큰)
+
+=SMALL(array, k)
+=SMALL(배열, 몇 번째로 작은)
+
+=MEDIAN( , , ) : 중간 값, 2개가 남으면 남은 두 수의 평균을 구함
+ex) =MEDIAN(10, 20, 25, 30)일 경우 22.5가 나옴.
+
+COUNT 시리즈(개수, 명수, 횟수)
+
+COUNT : 숫자 셀(숫자만)
+
+COUNTA(value1, value2, ... ) : 비어있지 않은 셀(All)
+COUNTA(값1, [값2, ...] )
+
+COUNTBLANK(range) : 비어있는 셀(※ 미납액, 결석자 등)
+COUNTBLANK(조건범위)
+
+★COUNTIF(range, criteria) : 조건에 맞는 셀★
+=COUNTIF(조건범위, 조건)
+
+COUNTIFS(criteria, range1, criteria) : 여러 조건에 맞는 셀
+=COUNTIFS(조건범위, 조건1, 조건2)
+
+★RANK.EQ(number, ref, [order])★
+=RANK.EQ(순위를 구할 수, 영역, [정렬방식])
+※ 정렬방식 : 내림차순(0 또는 생략) ex) 성적, 오름차순(1) ex) 달리기
+
+ROUND, ROUNDUP, ROUNDDOWN
+ 반올림	   올림	       내림
+=ROUND(number, num_digit)
+=ROUND(순위를 구할 수, 자릿수) : 자릿수를 없앨 때는 num_digit은 0
+  1  2  3  .  4  5  6
+ -3 -2 -1 0  1  2  3 
+
+crtl+F11 : 새 시트 만들기    
+
+SUMIF(range, criteia, [sum_range])
+=SUMIF(조건범위, 조건, 합의 범위)
+
+AVERAGEIF(range, criteria, [average_range])
+=AVERAGEIF(조건범위, 조건, 평균범위)
+
+SUMIF(range, criteria, [sum_range])
+=SUMIF(조건범위, 조건, 합의 범위)
+
+COUNTIF(range, criteria)
+=COUNTIF(조건범위, 조건)

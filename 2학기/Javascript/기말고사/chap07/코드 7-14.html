@@ -1,0 +1,12 @@
+<script>
+    // 기본적인 메소드 사용
+    // 자신을 호출하는 객체의 내용을 변화시키는 메소드를 파괴적 메소드라고 함
+    // 자신을 호출하는 객체의 내용을 변화시키지 않고 리턴하는 메소드를 비파괴적 메소드라고 함
+    let string = 'Hello World'
+
+    string = string.toLowerCase()
+    string = string.replace(" ", '|')
+    let array = string.split("|")
+
+    document.write(string)
+</script>

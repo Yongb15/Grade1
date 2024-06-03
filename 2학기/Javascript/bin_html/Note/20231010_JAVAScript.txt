@@ -1,0 +1,101 @@
+문제 6번
+
+let i = 0;
+while(i < 10) {
+	console.log("출력");
+	i++;
+}
+
+문제 7번
+for(let i = 0; i < 20; i = i + 2) {
+	console.log("출력")
+}
+
+문제 8번
+let output = '';
+
+for (let i = 0; i < 8; i++) {
+	for (let j = 0; j < 7-i; j++) {
+		output += ' ';
+	}
+	for (let k = 0; k < i * 2 + 1; k++) {
+		output += '*';
+	}
+	output += '\n';
+}
+console.log(output);
+
+문제 9번
+let array = [52,273,32,93,103];
+
+for(let i in array) {
+	console.log(array[i]);
+}
+
+문제 10번
+
+let array = [273, 52, 103, 57, 271];
+
+let min = Number.MAX_VALUE;
+let max = Number.MIN_VALUE;
+
+for(let i = 0; i < array.length-1; i++) {
+	if (array[i] > max) {
+		max = array[i];
+	}
+	if (array[i] < min) {
+		min = array[i];
+	}
+}                                            
+
+or
+
+/*
+for(let item of array) {
+	if(item < min) {
+		min = item;
+	}
+	if(item > max) {
+		max = item;
+	}
+} */
+
+
+console.log(`가장 큰 수: ${max}`);
+console.log(`가장 작은 수: ${min}`);
+
+문제 11번
+
+let array = [52, 71, 32, 103, 273, 93];
+
+for(let i = 6; i >= 0; i--) {					or for(let i = array.length-1; i >= 0; i--)
+	console.log(array[i]);
+}
+
+매개 변수 초기화
+
+function print(name, count) {
+	console.log(`${name}이/가 ${count}개 있습니다.`);
+}
+
+print("사과", 10);
+print("사과");
+
+조건문을 활용한 매개 변수 초기화
+
+function print(name, count) {
+	if(typeof(count) == "undefined") {
+		count = 1;
+	}
+	console.log(`${name}이/가 ${count}개 있습니다.`);
+}
+
+print("사과");
+
+짧은 초기화 조건문을 활용한 매개 변수 초기화
+
+function print(name, count = 1) {
+	console.log(`${name}이/가 ${count}개 있습니다.`);
+}
+print("사과");
+print("사과",10);

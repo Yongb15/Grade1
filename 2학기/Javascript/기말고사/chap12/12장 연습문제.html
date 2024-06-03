@@ -1,0 +1,75 @@
+<script>
+    // 5번 문제(1)
+    /*
+    let year = prompt("태어난 년도를 입력하세요")
+
+    switch(year%12)
+    {
+    case 1:
+        document.write("닭띠입니다.")
+        break
+    case 2:
+        document.write("개띠입니다.")
+        break
+    case 3:
+        document.write("돼지띠입니다.")
+        break
+    case 4:
+        document.write("쥐띠입니다.")
+        break
+    case 5:
+        document.write("소띠입니다.")
+    break
+    case 6:
+        document.write("호랑이띠입니다.")
+        break
+    case 7:
+        document.write("토끼띠입니다.")
+        break
+    case 8:
+        document.write("용띠입니다.")
+        break
+    case 9:
+        document.write("뱀띠입니다.")
+        break
+    case 10:
+        document.write("말띠입니다.")
+        break
+    case 11:
+        document.write("양띠입니다.")
+        break
+    case 12:
+        document.write("원숭이띠입니다.")
+        break
+    } */
+
+    // 5번 문제(2)
+    let num = []
+    
+    max = 0
+    min = 0
+
+    num[0] = parseInt(prompt("첫번째 숫자를 입력하세요"))
+    num[1] = parseInt(prompt("두번째 숫자를 입력하세요"))
+
+    if (num[0] > num[1])
+    {
+        max = num[0]
+        min = num[1]
+    }
+    else 
+    {
+        max = num[1]
+        min = num[0]
+    }
+
+    sum = max + min
+
+    for (let i = 0; i < max - min - 1; i++)
+    {
+        num[i+2] = max - min - i
+        sum += num[i+2]
+    }
+
+    document.write(sum)
+</script>

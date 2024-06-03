@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        fieldset {
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        li {
+            line-height: 30px;
+        }
+        .subm {
+            display: block;
+            background-color: #fff;
+            border: 1px solid #dedede;
+            cursor: pointer;
+            padding: 5px 10px 6px 7px;
+        }
+
+        .subm img {
+            border: 0;
+            padding: 0;
+            width: 16px;
+            height: 16px;
+        }
+
+        .subm:hover {
+            background-color: #e6efc2;
+            border: 1px solid #c6d880;
+            color: #529215;
+        }
+        label {
+            color: green; 
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form action="" oninput="resurt.value=parseInt(num1.value)+parseInt(num2.value)">
+            <h1>여름방학 특강 신청</h1>
+            <fieldset style="height: 160px;">
+                <legend><h4>수강 신청인</h4></legend>
+                <div style="margin: 1px 30px; padding-bottom: 25px;"><ul>
+                    <div><li>
+                        <label for="num">학번&nbsp</label>
+                        <input type="number" id="num" required autofocus placeholder="0000000">
+                    </li></div>
+                    <div><li>
+                        <label for="name">이름&nbsp</label>
+                        <input type="text" id="name" required autofocus placeholder="홍길동">
+                    </li></div>
+                    <li>
+                        <div><label for="name">학과&nbsp</label>
+                        <select id="class">
+                            <optgroup label="공과대학">
+                                <option value="archi">건축공학과</option>
+                                <option value="mechanic">기계공학과</option>
+                                <option value="indust">산업공학과</option>
+                                <option value="elec">전기전자공학과</option>
+                                <option value="computer" selected>컴퓨터공학과</option>
+                                <option value="chemical">화학공학과</option>
+                            </optgroup>
+                            <optgroup label="인문대학">
+                                <option value="history">사학과</option>
+                                <option value="lang">어문학부</option>
+                                <option value="philo">철학</option>
+                            </optgroup>
+                        </select>
+                    </li></div>
+                </ul></div>
+            </fieldset>
+            <fieldset style="height: 80px; padding-bottom: 30px;">
+                <legend><h4>수강 과목을 선택하세요</h4></legend>
+                <ul>
+                    <li>
+                        <label for="text">관심분야&nbsp</label>
+                        <input type="text" id=" interset" list="choices">
+                        <datalist id="choices">
+                            <option value="grammar" label="문법"></option>
+                            <option value="voca" label="어휘"></option>
+                            <option value="speaking" label="회화"></option>
+                            <option value="listening" label="리스닝"></option>
+                            <option value="news" laber="뉴스청취" selected></option>
+                        </datalist>
+                    </li>
+                </ul>
+            </fieldset>
+            <div style="margin: 5px 0px;"><fieldset>
+                <ul>
+                    <li>
+                        <input type="number" name="num1" value="0">
+                        +<input type="number" name="num2" value="0">
+                        =<output name="resurt" for="num"></output>
+                    </li>
+                </ul>
+            </fieldset></div>
+            <div style="padding-top: 10px; padding-left: 2px;"><button type="submit" class="subm">
+                <img src="cccc.jpg" alt="">전송하기
+            </button></div>
+        </form>
+    </section>  
+</body>
+</html>

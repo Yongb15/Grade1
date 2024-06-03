@@ -1,0 +1,4 @@
+﻿  P.94 test 4 - 15.c
+C:\Users\dydql\OneDrive\바탕 화면\순서도\Test 4\P.94 test 4 - 15\P.94 test 4 - 15\P.94 test 4 - 15.c(23,37): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\dydql\OneDrive\바탕 화면\순서도\Test 4\P.94 test 4 - 15\P.94 test 4 - 15\P.94 test 4 - 15.c(34,16): warning C4244: '=': 'double'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  P.94 test 4 - 15.vcxproj -> C:\Users\dydql\OneDrive\바탕 화면\순서도\Test 4\P.94 test 4 - 15\Debug\P.94 test 4 - 15.exe

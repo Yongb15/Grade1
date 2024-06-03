@@ -1,0 +1,107 @@
+// 사람 3명의 신체정보를 관리하는 프로그램
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+/* 단순히 변수만 사용
+int main()
+{
+	int age1, age2, age3;
+	float height1, height2, height3;
+	float weight1, weight2, weight3;
+
+	scanf("%d %d %d", &age1, &age2, &age3);
+
+	printf("%d %d %d", age1, age2, age3);
+
+} */
+/* 배열사용
+int main() {
+	int age[3];
+	float height[3];
+	float weight[3];
+
+	for (int i = 0; i < 3;i++) {
+		scanf("%d", age + i);
+		scanf("%d", height + i);
+		scanf("%d", weight + i);
+	}
+}*/
+/* struct people {
+	int age;
+	float height;
+	float weight;
+};
+
+
+int main() {
+	struct people S1 = {24, 180, 65};															// struct == int, 구조체 자료형 {이름}
+
+	printf("%d\n", S1.age);
+	printf("%f\n", S1.height);
+	printf("%f\n", S1.weight);
+} */
+
+/*
+struct people {
+	int age;
+	float height;
+	float weight;
+};
+
+typedef struct people PERSON;										// typedef 사용
+
+int main() {
+
+	PERSON S1 = { 24, 180, 65 };															
+
+	printf("%d\n", S1.age);
+	printf("%f\n", S1.height);
+	printf("%f\n", S1.weight);
+} */
+
+/*
+typedef struct people {									// typedef struct people {. . .}PERSON; 와 같음
+	int age;
+	float height;
+	float weight;
+}PERSON; */
+
+// 헤더 파일을 쓰는 이유 -> C언어에서 제공하는 함수를 쓰기위함.
+
+/*
+struct people {
+	int age;
+	float height;
+	float weight;
+};
+
+typedef struct people PERSON;										// typedef 사용
+
+int main() {
+
+	PERSON S1 = { 26, 0, 55 };
+	S1.height = 170;
+
+
+	printf("%d\n", S1.age);
+	printf("%f\n", S1.height);
+	printf("%f\n", S1.weight);
+} */
+
+struct Test {
+	char a;
+	char f;
+	short s;
+	int b;
+	short c;
+	char d;
+	char g;
+};
+
+int main() {
+
+	struct Test size;
+
+	printf("%d", sizeof(size));
+
+}

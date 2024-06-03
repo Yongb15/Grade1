@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그에 자바스크립트 코드</title>
+    <!-- obj는 전달받은 img 태그를 가르킴 -->
+    <script src="lib.js">   // lib.js 불러오기
+    </script>
+</head>
+<body>
+    <h3>마우스 올려 보세요</h3>
+    <hr>
+    <img src="apple.png" alt="이미지" style="width: 200px; height: 200px;"
+    onmouseover="over(this)"        
+    onmouseout="out(this)"> 
+    <!-- this는 현재 img 태그를 가리키는 자바스크립트 키워드 -->
+</body>
+</html>

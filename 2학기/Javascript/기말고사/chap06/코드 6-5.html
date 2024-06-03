@@ -1,0 +1,15 @@
+<script>
+    // 객체와 반복문
+    // for in 반복문 사용
+    // 인덱스 대신 키가 들어감
+    // for of는 요소에 접근하는 거므로 사용 x
+    let object = {
+        name : '바나나',
+        price : 1200
+    };
+
+    for (let key in object)
+    {
+        document.write(`${key} : ${object[key]}` + "<br>");
+    }
+</script>

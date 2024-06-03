@@ -1,0 +1,67 @@
+문제 5번
+1)
+year = Number(prompt("태어난 년도를 입력하세요"))
+
+let ddi = ["닭띠", "개띠", "돼지띠", "쥐띠", "소띠", "호랑이띠", "토끼띠", "용띠", "뱀띠", "말띠", "양띠", "원숭이띠"]
+year = year % 12 - 1
+
+alert(ddi[year])
+
+
+
+2-1)
+let num1 = Number(prompt("첫 번째 숫자를 입력하세요"));
+let num2 = Number(prompt("두 번째 숫자를 입력하세요"));
+let max = 0;
+let min = 0;
+let num = [];
+let sum = 0;
+
+if (num1 > num2)
+{
+	max = num1
+	min = num2
+}
+else
+{
+	max = num2
+	min = num1
+}
+
+num[0] = max
+num[1] = min
+sum = max + min
+
+for (let i = 0; i < max - min - 1; i++)
+{
+	num[i+2] = min + 1 +i
+	sum += num[i+2]
+}
+
+console.log(sum)
+
+2-2)
+let num1 = Number(prompt("첫 번째 수를 입력하세요"));
+let num2 = Number(prompt("두 번째 수를 입력하세요"));
+sum = 0;
+ 
+if (num1 > num2)
+{
+	for (num2; num2 <= num1; num2++)
+	{
+		sum += num2
+	}
+	alert(sum)
+}
+else if (num1 < num2)
+{
+	for (num1; num1 <= num2; num1++)
+	{
+		sum += num1
+	}
+	alert(sum)
+}
+else
+{
+	alert(num1)
+}

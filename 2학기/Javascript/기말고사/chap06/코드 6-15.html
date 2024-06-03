@@ -1,0 +1,19 @@
+<script>
+    // 클래스의 속성(1)
+    // 클래스의 메소드 내부에서 this 키워드는 클래스를 기반으로 만들어지는 객체를 의미
+    // this 키워드 내부에 값을 집어넣으면 객체의 속성을 만들 수 있음
+    class Product {
+        constructor (name, price)
+        {
+            this.name = name
+            this.price = price
+        }
+    }
+
+    let product = new Product("바나나", 1200);
+
+    // 인스턴스 속성에 접근
+    document.write(product.name)
+    document.write(product.price)
+
+</script>

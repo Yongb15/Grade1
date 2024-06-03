@@ -1,0 +1,21 @@
+<script>
+    // 함수를 외부로 내보낸 형태
+    let product = [
+        { name : '바나나', price : 1200},
+        { name : '사과', price : 2000},
+        { name : '배', price : 3000},
+        { name : '고구마', price : 700},
+        { name : '감자', price : 600},
+        { name : '수박', price : 5000}
+    ];
+
+    function printProduct(product)
+    {
+        document.write(`${product.name}의 가격은 ${product.price}원입니다.`+ "<br>");
+    }
+
+    for (let i of product)
+    {
+        printProduct(i)
+    }
+</script>

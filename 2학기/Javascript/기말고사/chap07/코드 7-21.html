@@ -1,0 +1,37 @@
+<script>
+    // pop(), push() 모두 파괴적 메소드
+    let array = [
+        {
+            name : '고구마',
+            price : 1000
+        },
+
+        {
+            name : '감자',
+            price : 500
+        },
+
+        {
+            name : '바나나',
+            price : 1500
+        }
+    ];
+
+    let popped = array.pop()                // 뺌
+    
+    document.write(`- 배열에서 꺼낸 요소<br>`)
+    document.write(popped+"<br>")
+    document.write(`- pop() 메소드를 호출한 이후의 배열<br>`)
+    document.write(array+"<br>")
+
+    array.push(popped)                      // pop한 것을 다시 넣음 
+    array.push(                             // 그 후에 사과를 넣음
+        {
+            name : '사과',
+            price : 2000
+        }
+    );
+
+    document.write(`- push() 메소드를 호출한 이후의 배열<br>`)
+    document.write(array)
+</script>

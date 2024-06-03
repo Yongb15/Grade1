@@ -1,0 +1,248 @@
+(코드 5-14)콜백 함수 
+
+function callTenTimes(callback) {
+	for(let i = 0; i < 10; i++) {
+		callback();
+	}
+}
+
+callTenTimes(function() {
+	console.log('함수 호출');
+	// 함수호출 10번 출력
+});
+
+
+(코드 5-15)표준 내장 함수
+
+let inputA = "52";
+let inputB = "52.273";
+let inputC = "1401동";
+let inputD = "동";
+
+console.log(parseInt(inputA));
+// 52 출력
+console.log(parseInt(inputB));
+// 52 출력
+console.log(parseFloat(inputB));
+// 52.273 출력
+console.log(parseInt(inputC));
+// 1401 출력
+console.log(parseInt(inputD));
+// NaN // 정수형이지만 값이 없음.
+
+
+parseInt() 함수 - 진법 변환
+
+// 2진법
+parseInt("0", 2);
+// 0 출력
+parseInt("10", 2);
+// 2 출력
+parseInt("100", 2);
+// 4 출력
+parseInt("1000", 2);
+// 8 출력
+
+// 8진법
+parseInt("0", 8);
+// 0 출력
+parseInt("10", 8);
+// 8 출력
+parseInt("100", 8);
+// 64 출력
+parseInt("1000", 8);
+// 512 출력
+
+// 16진법
+parseInt("0", 16);
+// 0 출력
+parseInt("10", 16);
+// 16 출력
+parseInt("100", 16);
+// 256 출력
+parseInt("1000", 16);
+// 4096 출력
+
+
+(코드 5-16) 타이머 함수
+
+setTimeout(function() {
+	console.log("1초가 지났습니다.");
+}, 1000);
+// 특정 시간 후에 함수를 실행합니다.
+// 1초 후에 1번 실행
+
+setInterval(function() {
+	console.log("1초 마다 호출됩니다.");
+}, 1000);
+// 특정 시간마다 함수를 실행합니다.
+// 1초마다 실행
+
+
+(예제 5-9) clearInterval() 함수
+
+// 1초마다
+let id = setInterval(function() {
+	console.log("출력합니다.")
+}, 1000);
+
+// 3초 후에
+setTimeout(function() {
+	// 타이머를 제거합니다.
+	clearInterval(id);
+}, 3000);
+
+
+(코드 5-19) 함수 덮어쓰기
+
+let 함수;
+
+// 선언적 함수는 코드가 실행되기 전에 생성
+함수 = function() {
+	console.log("첫 번째 함수");
+}
+함수 = function() {
+	console.log("두 번째 함수");
+}
+
+함수();					// 두 번째 함수 출력
+
+
+(코드 5-20) 함수 덮어쓰기(2)
+
+// 선언적 함수가 먼저 생성되고, 이후에 익명 함수를 만듬.
+// 익명 함수는 선언적 함수를 '무조건적으로' 덮어씁니다.
+함수 = function() {
+	console.log("첫 번째 함수");
+};
+function 함수() {
+	console.log("두 번째 함수");
+};
+
+함수();					// 첫 번째 함수 출력
+
+
+예제 A
+
+함수A = function() {
+	console.log("1");
+};
+함수A = function() {
+	console.log("2");
+};
+
+함수A();					// 2 출력
+
+
+예제 B
+
+함수B = function() {
+	console.log("1");
+};
+function 함수B() {
+	console.log("2");
+};
+
+함수B();
+
+
+예제 C
+
+function 함수C() {
+	console.log("1");
+};
+함수C = function() {
+	console.log("2");
+};
+
+함수C();
+
+
+예제 D
+
+function 함수D() {
+	console.log("1");
+};
+function 함수D() {
+	console.log("2");
+};
+
+함수D();
+
+
+문제 11번
+
+1)
+function A(매개변수1) {
+	if(매개변수) {
+		매개변수1 = 10;
+	}
+	console.log(매개변수1);		// undefined
+};
+
+2)
+function B(매개변수2 = 10) {
+	console.log(매개변수2);
+}
+B();
+
+3)
+function C(매개변수3) {
+	if(typeof(매개변수) == 'undefined') {
+		매개변수 = 10;
+	}
+	console.log(매개변수);
+}
+C();
+
+4)
+function D(매개변수4) {
+	매개변수 = 매개변수 || 10;
+	console.log(매개변수);
+}
+D();
+
+
+문제 12번
+
+1)
+function power(a, b) {
+	if (!b) {
+		console.log(a**a);
+	}
+	else {
+		let output = 1;
+		for(let i = 0; i < b; i++) {
+			output *= a;
+		}
+		console.log(output);
+	}
+}
+power(2);
+power(2, 3);
+
+
+2)
+function multiply() {
+	let output = 1;
+	for(let i = 0; i < arguments.length; i++) {
+		output *= arguments[i];
+	}
+	console.log(output);
+}
+
+multiply(2,3,2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+

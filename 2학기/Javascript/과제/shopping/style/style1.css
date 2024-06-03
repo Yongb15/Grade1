@@ -1,0 +1,247 @@
+header {
+    max-width: 100%;
+    min-width: 1614px;
+    height: 100px;
+    background-color: beige;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box; 
+    border: solid 3px;
+}
+
+#logo {
+    float: left; 
+    display: flex; 
+    align-items: center;
+    padding-left: 30px;
+}
+
+#logo img {
+    max-width: 30%; 
+    height: auto; 
+    padding: 0 20px;
+    box-sizing: border-box;
+    min-width: 300px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction:row;
+        height: auto; 
+    }
+    #logo img {
+        width: 50%;
+    }
+    #menu li {
+        width: 100%; 
+        margin-right: 0; 
+        margin-bottom: 10px; 
+    }
+    #menu {
+        flex-direction: column; 
+        align-items: center;
+    }
+    #menu ul {
+        justify-content: center; 
+    }
+}
+
+#menu {
+    flex: 1; 
+    display: flex; 
+    justify-content: flex-end; 
+}
+
+#menu ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 90px;
+    justify-content: center;
+    max-width: 100%;
+}
+
+#menu li {
+    display: inline-block; 
+    margin-right: 60px;
+    margin-top: 30px;
+    padding: 0 20px;
+    text-align: center;
+    width: 200px;
+    height: 60px;
+    font-size: 30px;
+    line-height: 40px;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px; 
+}
+
+section {
+    max-width: 100%;
+    min-width: 1614px;
+    height: 720px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+}
+
+#login {
+    width: 18%;
+    padding: 20px;
+    border: solid;
+}
+
+#products {
+    flex: 1;
+    padding: 20px;
+    border: solid;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.product-info {
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+    padding-left: 20px;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.product-info {
+    margin-top: 20px;
+}
+#products-content {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#login-form {
+    background-color: seashell;
+    border: solid;
+    width: 250px;
+    height: 120px;
+    margin: 0 auto; 
+    padding-bottom: 50px;
+    padding-left: 20px;
+
+}
+
+#membership {
+    padding-top: 10px;
+}
+
+#notice {
+    background-color: seashell;
+    border: solid;
+    padding-bottom: 180px;
+    width: 270px;
+    height: 40px;
+    margin: 0 auto; 
+}
+
+#event {
+    background-color: seashell;
+    border: solid;
+    padding-bottom: 180px;
+    width: 270px;
+    height: 30px;
+    margin: 0 auto;
+}
+
+#event h2 {
+    text-align: center;
+}
+
+#event p {
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+#notice h2 {
+    font-size: 24px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+#notice p {
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.product-column {
+    width: 1100px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0 auto;
+    padding-left: 70px;
+}
+
+.product-item {
+    border: 1px solid black;
+    padding: 20px;
+    background-color: beige;
+}
+
+.date {
+    background-color: beige;
+    border: solid;
+    max-width: 100%;
+    min-width: 1550px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+#logo-footer {
+    display: flex;
+    align-items: center;
+}
+
+#logo-footer img {
+    height: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.footer-item {
+    padding-right: 30px;
+}

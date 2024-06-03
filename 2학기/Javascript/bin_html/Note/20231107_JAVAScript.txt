@@ -1,0 +1,204 @@
+<코드 6-9> 객체 배열
+let products = [
+	{ name: '바나나', price: 1200 },
+	{ name: '사과', price: 2000 },
+	{ name: '배', price: 3000 },
+	{ name: '고구마', price: 700 },
+	{ name: '감자', price: 600 },
+	{ name: '수박', price: 5000 }
+];
+
+<코드 6-10> 메소드를 가진 객체의 배열
+let products = [{
+	name: '바나나', 
+	price: 1200,
+	print: function () {
+		console.log(`${this.name}의 가격은 ${this.price}원입니다.`)
+	} }, {
+	name: '사과', 
+	price: 2000,
+	print: function () {
+		console.log(`${this.name}의 가격은 ${this.price}원입니다.`)
+	} }, {
+	name: '배',
+	price: 3000,
+	print: function () {
+		console.log(`${this.name}의 가격은 ${this.price}원입니다.`)
+	} }, {
+	name: '고구마',
+	price: 700,
+	print: function () {
+		console.log(`${this.name}의 가격은 ${this.price}원입니다.`)
+	} }, {
+	name: '감자',
+	price: 600,
+	print: function () {
+		console.log(`${this.name}의 가격은 ${this.price}원입니다.`)
+	} }, {
+	name: '수박',
+	price: 5000,
+	print: function () {
+		console.log(`${this.name}의 가격은 ${this.price}원입니다.`)
+	} 
+}];
+
+for (let product of products) {
+	product.print();
+}
+
+<코드 6-11> 함수를 외부에 내보낸 형태
+let products = [
+	{ name: '바나나', price: 1200 },
+	{ name: '사과', price: 2000 },
+	{ name: '배', price: 3000 },
+	{ name: '고구마', price: 700 },
+	{ name: '감자', price: 600 },
+	{ name: '수박', price: 5000}
+];
+
+function printProduct(product) {
+	console.log(`${product.name}의 가격은 ${product.price}원입니다.`);
+}
+
+for (let product of products) {
+	printProduct(product);
+}
+
+클래스 선언
+class Product {
+				// 틀 만들기
+}
+
+let 변수명 = new 클래스_이름()	// 부품
+	           (객체(인스턴스))
+
+<코드 6-12, 13> 클래스 선언
+class Product {
+	
+}
+
+let product = new Product();
+
+생성자
+- 클래스 내부에 constructor의 함수를 만들어 사용
+- 클래스 내부에 함수를 만들시 function 생략
+
+<코드 6-14> 클래스의 생성자
+class Product {
+	 constructor (name, price) {
+	
+	}
+}
+
+let product = new Product("바나나", 1200);
+
+this 키워드
+- this 키워드는 클래스를 기반으로 만들어지는 객체
+- this 키워드 내부에 값을 집어넣으면, 객체의 속성을 만듬
+
+<코드 6-15> 클래스의 속성(1)
+class Product {
+	 constructor (name, price) {
+		this.name = name
+		this.price = price	
+	}
+}
+
+let product = new Product("바나나", 1200);
+
+console.log(product.name)
+console.log(product.price)
+
+클래스
+- 속성 + 메소드
+
+<코드 6-16> 클래스의 속성(2)
+class Product {
+	constructor(name, price) {
+		this.name = name
+		this.price = price
+	}
+	print() {
+		console.log(`${this.name}의 가격은 ${this.price}원입니다.`)
+	}
+}
+
+let products = [
+	new Product('바나나', 1200),
+	new Product('사과', 2000),
+	new Product('배', 3000),
+	new Product('고구마', 700),
+	new Product('감자', 600),
+	new Product('수박', 500)
+];
+
+for(let product of products) {
+	product.print();
+}
+
+<코드 6-17> null의 값과 자료형
+console.log(null);
+console.log(typeof(null));
+
+<코드 6-18> 존재하지 않는 값 확인
+
+let zeroNumber = 0;
+let falseBoolean = ' ';
+let emptyString = ' ';
+let undefinedValue;
+let nullValue = null;
+
+if (zeroNumber == null) {
+	console.log('0은 존재하지 않는 값입니다.');
+}
+if (falseBoolean == null) {
+	console.log('false은 존재하지 않는 값입니다.');
+}
+if (emptyString == null) {
+	console.log('빈 문자열은 존재하지 않는 값입니다.');
+}
+if (undefinedValue == null) {
+	console.log('undefined는 존재하지 않는 값입니다.');
+}
+if (nullValue == null) {
+	console.log('null은 존재하지 않는 값입니다.');
+}
+
+p.212 
+6번 문제
+
+let product = {
+	name: 'Natue of Code',
+	price: '30000원',
+	author: '다니엘 쉬프만',
+	ISBN: 9788968481901,
+	page: '620페이지'
+};
+
+7번 문제
+class Product {
+	constructor(name, weight, price) {
+		this.name = name
+		this.weight = weight
+		this.price = price
+	}
+	calculate(a) {
+		console.log(`${a/this.weight*this.price}원입니다.`)
+	}
+}
+let product = new Product('돼지삼겹살', 100, 1690);
+
+product.calculate(200)
+
+8번 문제
+let object = {
+	"+": 1,
+	"-": 2,
+	"*": 3,
+	"/": 4
+};
+
+console.log(object.+);
+console.log(object.-);
+console.log(object.*);
+console.log(object./);

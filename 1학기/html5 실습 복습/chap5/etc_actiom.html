@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응 선택자, 글꼴 지정 및 크기 지정</title>
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/jejuhallasan.css); 
+        .ng-font{
+            font-family: 'jejuhallasan', 제주 한라산;
+        }
+        body {
+            font-family: 굴림;
+        }
+        div:hover {
+            color: red;
+        }
+        div:active {
+            color: blue;
+        }
+        div {
+            font-size: 3em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>이게 뭐야</h2> 
+        <h1 class="ng-font">반응 선택자</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+2023-09-12 자바스크립트
+
+about:blank -> 콘솔 
+
+<- ->방향키로 이전꺼 복원
+
+식별자 이름
+  - 키워드 x
+  - 특수 문자는 _, $
+  - 숫자로 시작 x
+  - 공백 x
+
+console.log( ) : 콘솔 창에 출력 console.log("Hello");
+REPL <- "Hello";
+
+""를 두 번 사용할 시에는  \n " 문자 \n " 사용
+
+console.log("안녕하세요"[2]); 문자열 선택
+
+console.log("안녕하세요"[0]);
+console.log("안녕하세요"[1]);
+console.log("안녕하세요"[2]);
+console.log("안녕하세요"[3])
+console.log("안녕하세요"[4]);
+
+"안녕하세요" 일반 문자열
+'52 + 273 = &{52 + 273}'
+`안녕하세요` 탬플릿 문자열
+`52 + 273 = ${52 + 273}` ${ } <- 값
+
+변수 출력
+const city = "bucheon";
+const name = "Bong";
+const age = 24;
+
+console.log("저는 " + city + "에 살고 있습니다. 이름은 " + name + "이고, 나이는 " + age + "살 입니다.");
+
+console.log(`저는 ${city}에 살고 있습니다. 이름은 ${name}이고 나이는 ${age}살 입니다.`);
+
+` 와 ' 차이 구별
+` 은 탬플릿 문자열
+' 은 일반 문자열
+
+문자열 우선순위 동일
+console.log(30 > 20 > 10); 연산자가 같으면 왼쪽에서 오른쪽으로 진행
+1 > 10으로 바뀌어서 false로 나옴
+console.log(30 >( 20 > 10)); <- 해야 제 값 나옴
+
+문자열
+let hours = (new Date()).getHours();
+
+console.log(hours < 3 || 8 < hours);
+console.log(3 <= hours && hours <= 8);
+
+let 식별자; <- 변수 선언
+
+변수 출력 1
+let pi;
+pi = 3.14159265;
+
+undefuned <- 변수를 선언했으나 초기화하지 않은 자료형
+
+변수 출력 2
+let pi = 3.14159265;
+// undefined
+
+console.log(pi);
+
+변수 사용
+let pi = 3.14159265;
+let radius = 10;
+
+console.log(`둘레 : ${2 * pi * radius}`);
+console.log(`넓이 : ${pi * radius * radius}`);
+
+복합대입연산자
+
+let output = 0;
+output += 52;
+output += 273;
+output += 103;
+
+console.log(output);
+
+문자열과 관련된 복합 대입 연산자
+let output = "hello ";
+output += "world ";
+output += "!";
+
+console.log(output);
+
+증감 연산자
+let number = 10;
+
+number++;
+console.log(number);
+number--;
+console.log(number);
+
+전위형
+let number = 10;
+
+console.log(number);
+console.log(++number);
+console.log(--number);
+console.log(number);
+
+후위형
+let number = 10;
+
+console.log(number);
+console.log(number++);
+console.log(number--);
+console.log(number);
+
+전위형 후위형
+let number = 10;
+
+console.log(number++);
+console.log(++number);
+console.log(number--);
+console.log(--number);
+
+let number = 10;
+
+console.log(number);
+number++;
+number++;
+console.log(number);
+console.log(number);
+number--;
+number--;
+console.log(number);
+
+자료형 검사
+typeof a;
+
+typeof 10
+typeof "문자열"
+typeof(10);
+typeof("문자열");
+
+자바스크립트의 여섯 가지 자료형
+typeof('String');		// 'string'
+typeof(273);		// 'numer'
+typeof(true);		// 'boolean'
+typeof(function () { })	// 'function'
+typeof({ })		// 'object'
+
+let alpha
+typeof(alpha);		// 'undefined'
+
+문자열로 변환
+String(52)
+String(273)
+String(true)
+String(false)
+
+숫자로 변환
+console.log(Number("52"));		// 52
+console.log(Number("52.273"));	// 52.273
+console.log(Number(true));		// 1
+console.log(Number(false));		// 0
+console.log(Number("안녕하세요"));	// NaN
+
+NaN은 숫자로 변환할 수 없는 문자열
+
+NaN ※
+let nan = Number("안녕하세요");	// NaN 변수를 만듬
+	
+console.log(nan == nan);		// nan끼리 비교
+console.log(nan != nan);		// nan은 다름
+
+console.log(isNaN(nan));		// isNaN( )함수로 NaN인지 확인
+
+boolean
+0 NaN "" null undefined만 0
+
+// 변수 선언
+let nan = Number("안녕하세요");
+let undefinedVariable;
+// Boolean( ) 함수를 사용
+console.log(Boolean(0));
+console.log(Boolean(nan));
+console.log(Boolean(""));
+console.log(Boolean(null));
+console.log(Boolean(undefinedVariable));
+
+숫자 + 문자열 자료형 자동 변환
+
+console.log("52" + 273);
+console.log("52" - 273);
+console.log("52" * 273);
+console.log("52" / 273);
+console.log("52" % 273);
+
+일치 연산자
+console.log(`52 == "52": ${52 == "52"}`);
+console.log(`52 === "52" : ${52 === "52"}`);
+console.log();
+console.log(`0 == "": ${0 == ""}`);
+console.log(`0 === "": ${0 === ""}`);
+
+상수 : 항상 같은 수
+const
+
+const constant = "변경노노";
+
+const a = "처음 선언할 떄 값을 할당해야 합니다";
+const b = "아";
+
+
+
+
+
+
+
+
+
+
+
+
+
+

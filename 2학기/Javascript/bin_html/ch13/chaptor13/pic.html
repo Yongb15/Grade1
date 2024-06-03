@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1 (obj)
+        {
+            obj.src = "pic/image2.jpg"
+        }
+        function f2 (obj)
+        {
+            obj.src = "pic/image1.webp"
+        }
+    </script>
+</head>
+<body>
+    <h4> 마우스를 그림 위로 이동하면... </h4>
+    <img id = "fg" src="pic/image1.webp" alt="" width="200" height="150" onmouseover="f1(this);" onmouseout="f2(this);">
+</body>
+</html>

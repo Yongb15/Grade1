@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page</title>
+</head>
+<style>
+    .container {
+        width: 1000px;
+        margin: 20px auto;
+    }
+    h1 {
+        text-align: center;
+    }
+    .prod-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    .prod-list li {
+        position: relative;
+        float: left;
+        padding: 0;
+        margin: 10px;
+        overflow: hidden;
+    }
+    .prod-list img {
+        margin: 0;
+        padding: 0;
+        float: left;
+        z-index: 5;
+    }
+    .prod-list .caption {
+        position: absolute;
+        top: 200px;
+        width: 300px;
+        height: 200px;
+        padding-top: 20px;
+        background-color: rgba(0,0,0,0.6);
+        opacity: 0;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        z-index: 10;
+    }
+    .prod-list li:hover .caption {
+        opacity: 1;
+        -moz-transform: translateY(-200px);
+        -ms-transform: translateY(-200px);
+        -o-transform: translateY(-200px);
+        -webkit-transform: translateY(-200px);
+        transform: translateY(-200px);
+    }
+    .prod-list .caption h2, .prod-list .caption p {
+        color: #fff;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>신상품 목록</h1>
+    <div id = container>    
+        <ul class="prod-list">
+            <li>
+                <img src="dusvlf.jpg" alt=" " width="300px" height="200px">
+                <div class="caption">
+                    <h2>연필</h2>
+                    <p>필당</p>
+                    <p>1000원</p>
+                </div>
+            </li>
+            <li>
+                <img src="dhtrkrp.jpg" alt=" " width="300px" height="200px">
+                <div class="caption">
+                    <h2>옷</h2>
+                    <p>한벌당</p>
+                    <p>150,000원</p>
+                </div>
+            </li>
+            <li>
+                <img src="dhkdls.jpg" alt=" " width="300px" height="200px">
+                <div class="caption">
+                    <h2>와인</h2>
+                    <p>한병당</p>
+                    <p>800,000원</p>
+                </div>
+            </li>
+        </ul>
+    </div>    
+</body>
+</html>

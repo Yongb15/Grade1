@@ -1,0 +1,14 @@
+<script>
+    // 같은 객체에 있는 속성일 경우 this 키워드 사용
+    // 화살표 함수로 메소드 생성시 undefined가 나옴
+    // 반드시 this 키워드 사용
+    let object = {
+        name : '바나나',
+        price : 1200,
+        print : function () {
+            document.write(`${this.name}의 가격은 ${this.price}원입니다.`)
+        }
+    };
+
+    object.print()
+</script>

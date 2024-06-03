@@ -1,0 +1,119 @@
+코드 7-9 Number 클래스의 MAX_VALUE 속성
+let numberA = Number.MAX_VALUE;
+let numberB = Number.MAX_VALUE + 1;
+
+console.log(numberA);
+console.log(numberB);
+
+코드 7-10 Infinity로 변환되는 숫자
+let addNumber = Number('0.0000000000000001e+308');
+let number = Number.MAX_VALUE + addNumber;
+
+console.log(number);
+
+코드 7-12 잘못된 String 객체의 메소드 사용
+let string = 'abcdefg';
+
+string.toUpperCase();
+
+console.log(string);
+
+코드 7-13 올바른 String 객체의 메소드 사용
+let string = 'abcdefg';
+
+string = string.toUpperCase();
+
+console.log(string);
+
+
+코드 7-16 indexOf() 메소드(문자열 포함)
+let string = '안녕하세요. 좋은 아침입니다.';
+
+if (string.indexOf('아침') >= 0)
+{
+	console.log('좋은 아침이에요...!');
+}
+
+코드 7-19 시간 더하기
+let date = new Date();
+
+console.log(date);
+
+date.setFullYear(date.getFullYear() + 1);
+date.setMonth(date.getMonth() + 11);
+date.setDate(date.getDate() + 3);
+
+console.log(date);
+
+코드 7-20 시간 간격 구하기
+let now = new Date();
+let before = new Date('December 15, 2000');
+
+let interval = now.getTime() - before.getTime();
+interval = Math.floor(interval / (1000 * 60 * 60 * 24));
+
+console.log(`태어나고 ${interval}일 지났습니다.`);
+
+코드 7-21 Array 객체의 메소드
+let array = [{
+	name : '고구마',
+	price : 1000
+}, {
+	name : '감자',
+	price : 500
+}, {
+	name : '바나나',
+	price : 1500
+}];
+
+let popped = array.pop();
+console.log('- 배열에서 꺼낸 요소');
+console.log(popped);
+console.log(' - pop() 메소드를 호출한 이후의 배열');
+console.log(array);
+
+array.push(popped);
+array.push({
+	name : "사과",
+	price : 2000
+});
+console.log('- push() 메소드를 호출한 이후의 배열');
+console.log(array);
+
+코드 7-22 Array 객체의 메소드
+let arr = [52, 273, 32, 64, 72];
+
+console.log('--- forEach() 메소드 ---');
+arr.forEach((item, index) => {
+	console.log(`- ${index}번째 요소는 ${item}입니다.`);
+});
+
+console.log();
+console.log('--- filter() 메소드 ---');
+
+let outputB = arr.filter((item, index) => {
+	return item % 2 == 0;
+});
+console.log(outputB);
+
+p252 3번문제
+const date = new Date(2000, 12, 10)
+console.log(date.toString());
+
+p252 4번문제
+String.prototype.contain = function(input) {
+	return this.indexOf(input) >= 0;
+};
+
+console.log('안녕하세요'.contain('안녕'));
+console.log('안녕하세요'.contain('데굴데굴'));
+console.log('안녕하세요'.contain('하'));
+
+p253 6번문제
+let string = "Hello World..!";
+
+string = string.toUpperCase();
+console.log(string);
+
+string = string.toLowerCase();
+console.log(string);

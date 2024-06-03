@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navi</title>
+    <style>
+        .container {
+            width: 800px;
+        }
+        ul {
+            list-style-type: none;
+            text-align: center;
+        }
+        li {
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            padding-top: 10px;
+            display: inline-block;
+        }
+        .color:hover {
+            background-color: black;
+            color: white;
+        }
+        .color {
+            color: black;
+        }
+        .contents {
+            width: 400px;
+            margin: 30px auto;
+            border-radius: 5px;
+            padding: 20px;
+        }
+        #intro {
+            margin-top: 40px;
+
+        }
+        #room {
+            margin-top: 40px;
+
+        }
+        #reservation {
+            margin-top: 40px;
+
+        }
+        #color:active {
+            background-color: red;
+        }
+        #intro:target {
+            background-color: blue;
+            color: white;
+        }
+        #room:target {
+            background-color: orange;
+            color: black;
+        }
+        #reservation:target {
+            background-color: ivory;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"><nav class="navi">
+        <ul>
+            <a href="#intro"><li class="color">이용 안내</li></a>
+            <a href="#room"><li class="color">객실 소개</li></a>
+            <a href="#reservation"><li class="color">예약 방법 및 요금</li></a>
+            <a href="#"><li class="color">예약하기</li></a><hr>
+        </ul>
+    </nav></div>
+    <div id="intro" class="contents" style="border: 1px solid;">
+            <h2>이용 안내</h2>
+            <p>Excepteur do est eiusmod nulla et veniam, Labore<br>
+               officia officia ex aliqua exeraitation aliqua laborum<br>
+               Lorem deserunt ut ullamco labore anim. Officia eu<br>
+               duis aliquip incididunt. Do laborum et consequat<br>
+               aliqua sint consectetur.</p>
+            </div>
+    <div id="room" class="contents" style="border: 1px solid;">
+            <h2>객실 소개</h2>
+            <p>Qui magna culpa minim reprehenderit magna in nisi
+               ipsum, Ad cillum tempor minim fugiat est dolor.
+               Cillum sit qui minim sint officia nostrud cillum
+               cupidatat pariatur ipsum eiusmod velit labore. Sit in
+               non fugiat minim sit</p>
+    </div>
+    <div id="reservation" class="contents" style="border: 1px solid;">
+        <h2>예약 방법 및 요금</h2>
+        <p>Fugiat aliquip mollit proident velit magna esse ea
+           officia eu, Esse do aliqua proident culpa eiusmod duis
+           minim deserunt eu reprehenderit ut tempor.</p>
+    </div>
+</body>
+</html>

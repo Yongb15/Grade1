@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print</title>
+</head>
+<body>
+    <h3>윈도우 타이머 메서드</h3><hr>
+    현재시간 : <span id = "clock"></span><hr>
+    <button onclick = "clearInterval(t1)">멈추기</button>
+    <button onclick = "window.print()">인쇄하기</button>
+    <script>
+        var t1 = setInterval(myClock, 1000);
+        function myClock() {
+            var currentTime = new Date();
+            document.getElementById("clock").innerHTML = currentTime.toLocaleTimeString();
+        }
+    </script>
+</body>
+</html>

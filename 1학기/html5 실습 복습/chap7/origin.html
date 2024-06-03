@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>origin</title>
+    <style>
+        body {
+            background-image: url('warm.png');
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-attachment: fixed;
+            background-size: 100px;
+        }
+        div {
+            border: 15px solid rgba(128, 128, 128, 0.5);
+            width: 400px;
+            height: 200px;
+            padding: 35px;
+            background-image: url('apple.png');
+            background-repeat: no-repeat;
+            background-position: right top;
+            background-size: 150px 144px;
+            font-size: small;
+        }
+        #bg1 {
+            background-origin: padding-box;
+        }
+        #bg2 {
+            background-origin: border-box;
+        }
+        #bg3 {
+            background-origin: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="bg1">
+        <h1>오늘의 과일</h1>
+        <h3>사과</h3>
+        <p>오늘의 과일은 사과에 대해 알려줄겁니다.<br>
+        사과의 과육은 잇몸건강에 좋으며 사과산은 어깨결림을 감소해주는 효과가 있다.<br>
+        사과로 만든 식초는 화상·두드러기 등을 치료하는 데 쓴다.</p>
+    </div><br>
+    <div id="bg2">
+        <h1>오늘의 과일</h1>
+        <h3>사과</h3>
+        <p>오늘의 과일은 사과에 대해 알려줄겁니다.<br>
+        사과의 과육은 잇몸건강에 좋으며 사과산은 어깨결림을 감소해주는 효과가 있다.<br>
+        사과로 만든 식초는 화상·두드러기 등을 치료하는 데 쓴다.</p>
+    </div><br>
+    <div id="bg3">
+        <h1>오늘의 과일</h1>
+        <h3>사과</h3>
+        <p>오늘의 과일은 사과에 대해 알려줄겁니다.<br>
+        사과의 과육은 잇몸건강에 좋으며 사과산은 어깨결림을 감소해주는 효과가 있다.<br>
+        사과로 만든 식초는 화상·두드러기 등을 치료하는 데 쓴다.</p>
+    </div>
+</body>
+</html>

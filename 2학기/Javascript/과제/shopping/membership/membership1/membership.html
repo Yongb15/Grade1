@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color:beige;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            width: 378px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: greenyellow;
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .form-button:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>회원가입</h2>
+        <form id="signup-form">
+            <div class="form-group">
+                <label for="name" class="form-label">이름:</label>
+                <input type="text" id="name" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">이메일:</label>
+                <input type="email" id="email" class="form-input" required>
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-label">비밀번호:</label>
+                <input type="password" id="password" class="form-input" required>
+            </div>
+            <button type="submit" class="form-button">가입하기</button>
+        </form>
+    </div>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            if (name.trim() === '' || email.trim() === '' || password.trim() === '') {
+                alert('모든 항목을 입력해주세요.');
+                return;
+            }
+
+            alert('회원가입이 완료되었습니다.');
+
+            document.getElementById('signup-form').reset();
+        }
+
+        var form = document.getElementById('signup-form');
+        form.addEventListener('submit', handleSubmit);
+    </script>
+</body>
+</html>

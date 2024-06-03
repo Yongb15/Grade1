@@ -1,0 +1,15 @@
+class Product {
+	constructor()
+	{
+		this.cal = 100;
+		this.price = 1680
+		this.name = "돼지고기"
+	}
+	calculate(w)
+	{
+		console.log(`${this.name}의 가격은 ${this.price * (w / 100)}입니다.`)
+	}
+};
+
+let product = new Product();
+product.calculate(200);

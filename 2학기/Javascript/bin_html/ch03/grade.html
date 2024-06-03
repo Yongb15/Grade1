@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-else로 학점 나타내기</title>
+</head>
+<body>
+    <h3>점수를 입력하면 학점이 나옵니다.</h3>
+    <hr>
+    <script>
+        let grade;
+        let name = prompt(`이름을 입력하세요. : `);                 // prompt == 입력
+        let score = parseInt(prompt(`점수를 입력하세요. : `));                // prompt == 입력                                 // parseInt(); == 입력받은 값을 숫자로 형변환, 같은 것은 Number();
+
+        if (score > 100 || score < 0) {
+            document.write(`잘못 입력 하셨습니다.`);
+        }
+        else if (score >= 90) {
+            grade = 'A';
+        }
+        else if (score >= 80) {
+            grade = 'B';
+        }
+        else if (score >= 70) {
+            grade = 'C';
+        }
+        else if (score >= 60) {
+            grade = 'D';
+        }
+        else {
+            grade = 'F';
+        }
+
+        document.write(`${name} 님의 점수는 ${score} 점이고, 학점은 ${grade} 입니다!<br>`);          // document.write() == 출력
+    </script>
+</body>
+</html>

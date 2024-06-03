@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 페이지</title>
+    <script>
+        // 화면 구성이 완료되면
+        window.onload = function ()
+        {
+            // h1 태그의 색상을 흰색으로 변경합니다.
+            const header = document.querySelector('h1');
+            header.style.backgroundColor = 'red';
+        };
+    </script>
+</head>
+<body>
+    <h1>Header 1</h1>   <!--매개 변수로 전달한 CSS 선택자로 선택되는 첫 번째 태그만 선택-->
+    <h1>Header 1</h1>
+    <h1>Header 1</h1>
+</body>
+</html>

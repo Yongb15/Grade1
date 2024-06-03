@@ -1,0 +1,468 @@
+1번 문제
+
+int main()
+{
+	int a = 10;	
+	int b = -11;
+
+	if (a > 0)								// a가 10보다 크므로 참
+	{
+		b = 1;								// b는 1
+	}
+	else if (a == 0)
+	{
+		b = 2;
+	}
+	else
+	{
+		b = 3;
+	}
+	printf("b : %d\n", b);
+}
+출력값 : b : 1 	
+
+2번 문제
+
+int main()
+{
+	int rank, m = 2;							
+
+	switch (m)								// m = 2
+	{
+	case 1:									// 1이 아님
+		rank = 300;
+	case 2:									// 2가 맞지만 break가 없어서 다음 case문으로
+		rank = 200;
+	case 3:
+		rank = 100;							
+		break;								// break문을 만나 rank = 100으로 종료
+	default:
+		rank = 10;
+	}
+	printf("rank : %d\n", rank);
+}
+출력값 : rank : 100
+
+3번 문제
+
+void fruit(int n)								// 2) n = 1	5) n = 2
+{
+	printf("app\t");							// 3) 출력	6)출력 2
+
+	if (n == 2)								// 7) n이 2이므로
+		return;								// 8) 리턴
+	fruit(n + 1);								// 4) 재귀함수로 fruit라는 함수에 2를 보냄
+}
+void main()
+{
+	fruit(1);								// 1) fruit라는 함수에 1을 보냄
+}
+출력값 : appapp								// tep은 8칸
+
+4번 문제
+
+int main()
+{
+	int ary[5];
+	ary[0] = 3;
+	ary[1] = 5;
+	ary[2] = ary[0] + ary[1];						// ary[0]의 값인 3과 ary[1]의 값인 5를 더함.
+
+	scanf("%d", &ary[3]);				// 입력값 : 9	
+	printf("%d, %d\n", ary[2], ary[3]);
+}
+출력값 : 8, 9
+
+5번 문제
+
+int main()
+{
+	char str[3];
+	str[0] = '0';
+	str[1] = 'K';
+	str[1] = '@';
+	str[2] = '\0';								// 문자열의 끝은 \0
+
+	printf("%s\n", str);
+}
+출력값 : O@
+
+6번 문제
+
+int main()
+{
+	char str1[80] = "cat";							// cat로 초기화
+	char str2[80];
+
+	strcpy(str1, "tiger");							// 문자열 복사 tiger를 str1에 붙여넣기
+	strcpy(str2, str1);								// str1에 있는 타이거를 str2에 붙여넣기
+
+	printf("%s, %s\n", str2, str1);
+}
+출력값 : tiger, tiger
+
+7번 문제
+
+int main()
+{
+	int a;
+	int* pa;									
+	pa = &a;									// pa에 a의 주소가 들어감
+
+	a = 33;									// a의 33의 주소를 넣음				
+	*pa = 88;								// p의 주소인 a의 값에 88을 넣음
+
+	printf("%d %d\n", *pa, a);	
+}
+출력값 : 88 88
+
+8번 문제
+
+int main()
+{
+	int a = 10;
+	int b = 20;
+
+	const int* pa = &a;							// const int* pa = &a일 경우에는 주소를 바꿀 수 있지만 값을 바꿀 수는 없다.
+										// int* const pa = &a일 경우네는 주소를 바꿀 수 없지만 값은 바꿀 수 있다.
+	pa = &b;
+
+	printf("%d", *pa);
+	
+	a = 33;
+
+	printf("%d\n", *pa);
+}
+출력값 : 2020
+
+9번 문제
+
+int main()
+{
+	char ch;
+	int in;
+	double db;
+
+	char* pc = &ch;
+	int* pi = &in;
+	double* pd = &db;
+	
+	printf("%d%d%d ", sizeof(pc), sizeof(pi), sizeof(pd));			// 포인터의 크기
+	printf("%d%d%d ", sizeof(*pc), sizeof(*pi), sizeof(*pd));			// 가르키는 값의 크기
+	printf("%d%d%d\n", sizeof(&ch), sizeof(&in), sizeof(&db));		// 포인터의 크기
+}
+출력값 : 888 148 888
+
+10번 문제
+
+int main()
+{
+	int ary[5] = { 10, 20, 30, 40, 50 };
+
+	printf("%d ", *ary);							// ary의 첫 번째 주소가 가르키는 값
+	printf("%d\n", ary[1] + ary[3]);
+}
+출력값 : 10 60
+
+11번 문제
+
+int main()
+{
+	int ary[3];
+	int i;
+
+	*(ary + 0) = 10;
+	*(ary + 1) = *(ary + 0) + 10;						// ary의 값 + 10
+
+	printf("%5d", *(ary + 1));
+}
+출력값 : ___20
+
+12번 문제
+
+int main()
+{
+	int ary[5] = { 10,20,30,40,50 };
+	int* pa = ary;								// 0번째 방의 주소
+	int* pb = pa + 3;								// 3번재 방의 주소
+
+	pa++;									// 0+1번째 방의 주소이므로 1번째 방의 주소
+
+	printf("%u ", pb - pa);							// %u는 부호없는 10진수, 포인터에서의 -는 주소의 차
+
+	if (pa < pb)								// pb의 주소와 pa의 주소를 비교
+		printf("%d\n", *pa);
+	else
+		printf("%d\n", *pb);
+}	
+출력값 : 2 20
+
+13번 문제
+
+int main()
+{
+	printf("%d ", 'c');							// 정수로 99
+	printf("%c ", 99);							// 99의 문자는 c
+	printf("%d\n", sizeof('c'));			// 'a' => 97임		// 크기				// char로 변수를 선언했을 때는 1로 찍힘
+}
+출력값 : 99 c 4
+
+14번 문제
+
+int main()
+{
+	char small, cap = 'B';						// B = 66 
+		
+	if ((cap >= 'A') && (cap <= 'Z'))					// A = 65
+	{
+		small = cap + ('a' - 'A');					// 66 + (97 - 65) = 98
+	}
+	printf("%c", cap);							// 66의 아스키코드인 B
+	printf("%c", small);							// 98의 아스키코드인 b
+}
+출력값 : Bb
+
+15번 문제
+
+int main()
+{
+	char ch;
+	int i;
+	
+	for (i = 0; i < 3; i++)							// 0, 1, 2 3번 동작
+	{
+		scanf("%c", &ch);				// yuhan 입력	// 각각 y, u, h를 받음		// 만약 getchar()이 있으면 한칸씩 띄어 저장
+		printf("%c", ch);						
+	}
+}
+출력값 : yuh
+
+16번 문제
+
+int main()
+{
+	printf("%c", *"mango");						// 1번째 문자가 찍힘
+	printf("%c", *("mango" + 3));						// ("mango") + 3은 알파벳 순인 (n o p) 즉 p가 찍힘
+	printf("%d\n", "mango"[1]);						// ★ 진짜 악질 ★ a의 아스키 코드인 97이 찍힘
+}
+// 출력값 : mg97
+
+17번 문제
+
+int main()
+{
+	char str[80] = "yuhan";
+	char* ps = "smart-app";
+
+	puts(str);								// str 출력		puts()의 특징은 줄바꿈
+	fputs(ps, stdout);							// 표준출력장치에 ps를 출력, 	fputs()의 특징은 줄바꿈 x
+	puts("화이팅");
+}
+출력값 :  yuhan
+	smart-app화이팅
+
+18번 문제
+
+int main()
+{
+	char* pc = "kim";
+	while (*pc != '\0')							// pc가 가르키는 값이 0이 아닐 때 실행
+	{
+		printf("%s", pc);						// pc의 문자열 출력
+		pc++;							// 1번 더해짐
+	}
+}
+출력값 : kimimm
+
+19번 문제
+
+int main()
+{
+	int a = 10;
+	int* p = &a;
+
+	*p = 20;
+
+	printf("%d", a);
+}
+출력값 : 20
+
+20번 문제
+
+int main()
+{
+	while (0)
+	{
+		printf("%s", "kim");
+	}
+}
+출력값 : 
+
+21번 문제
+
+int main()
+{
+	char str1[80] = "strawberry";
+	char str2[80] = "apple";
+
+	strcpy(str1, str2);
+
+	printf("%s", str1);
+}
+출력값 : apple
+
+22번 문제
+※중복※
+23번 문제
+
+int main()
+{
+	char str[20] = "mango tree";
+
+	strncpy(str, "apple", 3);						// apple의 3번째 글자까지 str 1~3번째에 붙여넣어라
+
+	printf("%s\n", str);
+}
+출력값 : appgo tree
+
+24번 문제
+
+int main()
+{
+	char str[20] = "mango tree";
+	
+	printf("%d %d\n", strlen(str), sizeof(str));				// strlen은 문자열의 끝을 만날때까지의 개수		// sizeof(str) = str의 크기
+}
+출력값 : 10 20
+
+25번 문제
+※중복※
+26번 문제
+※중복※
+27번 문제
+※중복※
+28번 문제
+
+int main()
+{
+	printf("%d ", 'b');				// 'a' => 97
+	printf("%c ", 98);
+	printf("%d\n", sizeof("kimds"));						// sizeof()는 문자열일 경우 "\0"까지 포함!
+}
+출력값 : 98 b 6
+
+29번 문제
+
+int main()
+{
+	char str[80] = "straw";
+
+	strncat(str, "piece", 3);						// strncat는 str뒤에 piece의 1~3번째 글짜까지 더하기
+										// strcat은 뒤에 이어쓰기
+
+	printf("%s\n", str);
+}
+출력값 : strawpie
+
+30번 문제
+
+int main()
+{
+	char str1[80] = "pear";
+	char str2[80] = "peach";
+
+	if (strncmp(str1, str2, 3) == 0)					// strncmp()에서 같은지 확인하는 것 같으면 0, 다르면 1
+	{
+		printf("같다.");
+	}
+	else
+	{
+		printf("다르다.");
+	}
+}
+// 출력값 : 같다. 
+
+31번 문제
+※중복※
+32번 문제
+
+int main()
+{
+	int a = 11;
+	int b = 44;
+	{									// 괄호 안에서만 동작
+		int a = 33;	
+		b = a + 23;							// 괄호를 나가도 적용
+	}									// 끝나면 사라짐
+	printf("%d%d", a, b);
+}
+// 출력값 : 1156
+
+33~34번 문제
+	
+void auto_func(void)								// 항상 초기화
+{
+	auto int a = 4;
+	a++;
+	printf("%d", a);
+}
+void static_func(void)								// 한번만 초기화
+{
+	static int a = 10;
+	a++;
+	printf("%d", a);
+}
+void main() 
+{
+	int i;
+
+	for (i = 0; i < 3; i++)
+	{
+		auto_func();
+		printf("\n");
+	}
+	for (i = 0; i < 3; i++)
+	{
+		static_func();
+		printf("\n");
+	}
+}
+33번 문제
+첫번째 줄 출력 결과 : 5
+		    5
+	               5
+34번 문제
+두번째 줄 출력 결과 : 11
+		   12
+		   13
+35번 문재
+
+void add_ten(int a)
+{
+	a = a + 10;
+}
+int main()
+{
+	int a = 10;
+
+	add_ten(a);
+
+	printf("%d\n", a);
+}
+출력값 : 10
+
+36번 문제
+
+void add_ten(int *pa)
+{
+	*pa = *pa + 10;
+}
+int main()
+{
+	int a = 10;
+
+	add_ten(&a);
+
+	printf("%d\n", a);
+}
+출력값 : 20

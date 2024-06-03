@@ -1,0 +1,27 @@
+MODE.SNGL(인수) : 앞에 있는 가장 많은 수 하나 반환
+MODE.MULT(인수) : 인수가 가장 많은 수 여러개 반환[배열]
+TRANSPOSE(MODE.MULT(인수)) : 행렬 변환
+
+MODE(값1, 값2, ...) : 가장 많이 있는 수 구할 때 사용
+SUMIF(조건범위, MODE(), 합의 범위) : MODE()랑 함께 사용 가능
+
+PRODUCT(값1, 값2, ...) : 곱하기
+SUMPRODUCT(배열1, 배열2, ...) : 곱하고 더하기
+
+COUNTIF(조건범위, 조건)
+COUNTIF(조건범위, ">="&AVERAGE()) : 평균 이상의 수
+
+PI() = 3.1415927 : 인수가 없음
+POWER(number, power) : 제곱
+SQRT() : 양의 제곱
+RAND() : 0보다 크고 1보다 작은 난수 발생
+RANDBETWEEN( , ) : 지정한 두 수 사이의 난수 발생
+TRUNC(number, number[digit]) : 지정한 자릿수만을 소수점 아래에 남기고 나머지 자리를 버린다.
+
+COUNTIF(조건범위, 조건) 
+COUNTIF(조건범위1, 조건1, 조건범위2, 조건2, ... ) : 127개까지 가능
+
+UNIQUE() : 범위나 배열에서 고유값을 반환
+
+SUMIF(조건범위, 조건, [합의 범위])
+SUMIFS(합의 범위, 조건범위1, 조건1, 조건범위2, 조건2, ...)

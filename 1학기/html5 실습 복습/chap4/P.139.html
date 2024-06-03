@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그룹으로 묶기</title>
+    <style>
+        div {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 300px;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 5px;
+        }
+        ul {
+            list-style:none;
+        }
+        fieldset {
+            width: 400px;
+        }
+        label {
+            float: left;
+            width: 130px;
+            text-align: right;
+        }
+        li {
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>
+                <section>
+                        <h1>회원 가입</h1>
+                    <div><form>
+                        <fieldset>
+                            <legend>로그인 정보</legend>
+                            <ul>
+                                <li>
+                                    <label for="id">아이디&nbsp</label>
+                                    <input type="text" id="id">
+                                </li>
+                                <li>
+                                    <label for="password">비밀번호&nbsp</label>
+                                    <input type="password" id="password">
+                                </li>
+                                <li>
+                                    <label for="password">비밀번호 확인&nbsp</label>
+                                    <input type="password" id="password">
+                                </li>
+                            </ul>
+                        </fieldset></div>
+                        <div><fieldset>
+                            <legend>개인 정보</legend>
+                            <ul>
+                                <li>
+                                    <label for="name">이름&nbsp</label>
+                                    <input type="text" id="name" required autofocus placeholder="홍길동">
+                                </li>
+                                <li>
+                                    <label for="email">메일 주소&nbsp</label>
+                                    <input type="email" id="email" required placeholder="aaa@bbb.com">
+                                </li>
+                                <li>
+                                    <label for="tel">연락처&nbsp</label>
+                                    <input type="tel" id="tel" required placeholder="010-9999-9999">
+                                </li>
+                                <li>
+                                    <label for="url">블로그/홈페이지&nbsp</label>
+                                    <input type="url" id="url" required placeholder="www.adsdad.com">
+                                </li>
+                            </ul>
+                        </fieldset></div>  
+                        <div><input type="submit" value="가입하기" style="width: 425px;">  
+                    </form>
+                </section>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

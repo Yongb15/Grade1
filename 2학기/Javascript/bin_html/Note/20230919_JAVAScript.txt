@@ -1,0 +1,293 @@
+자바스크립트 3주차
+
+// 코드 3-1 if문으로만 홀, 짝 구하기
+
+let input = 32;
+
+if (input % 2 == 0) {
+	console.log("짝수입니다!");
+}
+
+if (input % 2 == 1) {
+	console.log("홀수입니다!");
+}
+
+
+
+// 코드 3-2 현재 년월일시분초 구하기
+
+let date = new Date();					// date ==  변수,  Date == 객체
+
+console.log(date.getFullYear());				// date == 참조?, .getFullYear() == 가져오기, FullYear() == 메서드
+console.log(date.getMonth()+1);				// Month() == 0부터 시작, +1해야 제대로 나옴
+console.log(date.getDay());					// Day() == 요일로 표현 ex) 일 : 0, 월 : 1, ... 토 : 6, Date() == 날짜
+console.log(date.getHours());
+console.log(date.getMinutes());
+console.log(date.getSeconds());
+
+
+
+// 코드 3-3 if문으로만 오전 오후 구분
+
+let date = new Date();
+
+if(date.getHours() < 12) {					
+	console.log("오전입니다.");
+}
+
+if(date.getHours() >= 12) {
+	console.log("오후입니다.");
+}
+
+
+
+// 코드 3-4 if else문
+
+let input = 32;
+
+if (input % 2 == 0) {
+	console.log("짝수입니다!");
+}
+
+else {
+	console.log("홀수입니다!");
+}
+
+
+
+// 코드 3-5 if else문으로 오전 오후 구분
+
+let date = new Date();
+
+if (date.getHours() < 12) {
+	console.log("오전입니다!");
+}
+
+else {
+	console.log("오후입니다!");
+}
+
+
+// 코드3-6 중첩 조건문으로 아침, 점심, 저녁 나누기
+
+let date = new Date();
+let hours = date.getHours();
+
+if (hours < 11) {
+	console.log("아침먹을 시간입니다!");
+}
+
+else {
+	if (hours < 15) {
+		console.log("점심먹을 시간입니다!");
+	}
+
+	else {
+		console.log("저녁먹을 시간입니다!");
+	}
+}
+
+
+// 코드 3-7 if else if 조건문
+
+let date = new Date();
+let hours = date.getHours();
+
+if(hours < 11) {
+	console.log("아침먹을 시간입니다.");
+}
+
+else if(hours < 15) {
+	console.log("점심먹을 시간입니다.");
+}
+
+else {
+	console.log("저녁먹을 시간입니다.");
+}
+
+
+// 코드 3-8 논리연산자와 조건문 VS코드로 표현
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-else로 학점 나타내기</title>
+</head>
+<body>
+    <h3>점수를 입력하면 학점이 나옵니다.</h3>
+    <hr>
+    <script>
+        let grade;
+        let name = prompt("이름을 입력하세요. : ");                 // prompt == 입력
+        let score = prompt("점수를 입력하세요. : ");                // prompt == 입력
+        
+        score = parseInt(score);                                  // parseInt(); == 입력받은 값을 숫자로 형변환, 같은 것은 Number();
+
+        if (score > 100 || score < 0) {
+            document.write("잘못 입력 하셨습니다. <br>");
+        }
+        else if (score >= 90) {
+            grade = 'A';
+        }
+        else if (score >= 80) {
+            grade = 'B';
+        }
+        else if (score >= 70) {
+            grade = 'C';
+        }
+        else if (score >= 60) {
+            grade = 'D';
+        }
+        else {
+            grade = 'F';
+        }
+
+        document.write(name + "님의 점수는 " + score + "점이고, 학점은 " + grade + "입니다!<br>");          // document.write() == 출력
+    </script>
+</body>
+</html>
+
+
+코드 3-10 switch 조건문
+
+let input = 32;
+
+switch(input % 2) {
+	case 0: {
+		console.log("짝수입니다.");
+		break;
+	}
+	case 1: {
+		console.log("홀수입니다.");
+		break;
+	}
+}
+
+// 숫자 입력받기
+
+let input = Number(prompt("숫자를 입력하세요. : "));
+
+switch(input % 2) {
+	case 0: {
+		console.log("짝수입니다.");
+		break;
+	}
+	case 1: {
+		console.log("홀수입니다.");
+		break;
+	}
+}
+
+
+
+코드 3-11 break 키워드를 사용하지 않는 switch 조건문
+
+let date = new Date();				// let month = date.getMonth()+1
+
+switch(date.getMonth()+1) {
+	case 12: 
+	case 1:
+	case 2: {
+		console.log("겨울입니다.")
+		break;
+	}
+	case 3:
+	case 4:
+	case 5: {
+		console.log("봄입니다.")
+		break;
+	}
+	case 6:
+	case 7: 
+	case 8: {
+		console.log("여름입니다.")
+		break;
+	}
+	case 9:
+	case 10:
+	case 11: {
+		console.log("가을입니다.")
+		break;
+	}
+}
+
+
+let date = new Date()
+
+switch(date.getDay()) {
+	case 0: {
+		console.log("일요일입니다.");
+		break;
+	}
+	case 1: {
+		console.log("월요일입니다.");
+		break;
+	}
+	case 2: {
+		console.log("화요일입니다.");
+		break;
+	}
+	case 3: {
+		console.log("수요일입니다.");
+		break;
+	}
+	case 4: {
+		console.log("목요일입니다.");
+		break;
+	}
+	case 5: {
+		console.log("금요일입니다.");
+		break;
+	}
+	case 6: {
+		console.log("토요일입니다.");
+		break;
+	} 
+}
+
+코드 카페 메뉴
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cafe</title>
+</head>
+<body>
+    <script>
+        let price = 0;
+        let coffee = prompt("주문하세요(에스프레소, 커피, 카푸치노, 카페라떼)","");         // 문자도 케이스문 가능
+
+        switch(coffee) {
+            case "에스프레소": {
+                price = 3500;
+                break;
+            }
+            case "커피": {
+                price = 4000;
+                break;
+            }
+            case "카푸치노": {
+                price = 5500;
+                break;
+            }
+            case "카페라떼": {
+                price = 4500;
+                break;
+            }
+            default: {
+                document.write("주문하신 메뉴는 없습니다.");
+            }
+        } 
+        if(price!=0) {
+            document.write("주문하신 메뉴는 " + coffee + "이고, 가격은 " + price + "원입니다.<br>");            // 0이 아닐때만 출력
+        }
+    </script>
+</body>
+</html>
+
+
+

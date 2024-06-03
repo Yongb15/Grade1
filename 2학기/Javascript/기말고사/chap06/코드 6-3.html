@@ -1,0 +1,11 @@
+<script>
+    // 식별자로 사용할 수 없는 키
+    let object = {
+        'with space' : 273,
+        'with ~!@#$%^&*()?*-+' : 52
+    };
+
+    document.write(object['with space']+"\n")
+    document.write(object['with ~!@#$%^&*()?*-+'])          // 식별자 규칙에 어긋날 때는 []를 써야 객체의 요소에 접근이 가능
+    // document.write(object.with ~!@#$%^&*()?*-+)          // 식별자 규칙에 어긋날 때 .을 찍어 사용하면 자바스크립트 문법 오류 발생
+</script>

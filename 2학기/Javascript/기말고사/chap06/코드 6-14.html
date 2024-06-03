@@ -1,0 +1,14 @@
+<script>
+    // 생성자
+    // 클래스 내부에 constructor라는 이름의 함수를 만들어서 활용
+    // 클래스 내부에 함수를 만들 때는 앞에 function 키워드를 따로 붙이지 않아도 됨.
+
+    class Product {
+        constructor (name, price)
+        {
+            document.write(`${name}의 가격은 ${price}원입니다.`)
+        }
+    }
+
+    let product = new Product('바나나', 1200)
+</script>
